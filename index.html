@@ -1,3 +1,5 @@
+New
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +37,854 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
 .search-bar input{width:100%;padding:10px 16px 10px 40px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:'Poppins',sans-serif;background:var(--white);outline:none;transition:.2s}
 .search-bar input:focus{border-color:var(--saffron)}
 .search-bar .s-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--text3)}
+.nav-links{display:flex;gap:4px;flex-shrink:0}
+.nav-btn{padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:'Poppins',sans-serif;transition:.2s}
+.nav-btn.ghost{background:transparent;color:var(--text2);border:1px solid var(--border)}
+.nav-btn.ghost:hover{background:var(--saffron-light);color:var(--saffron);border-color:var(--saffron)}
+.nav-btn.fill{background:var(--saffron);color:#fff}
+.nav-btn.fill:hover{background:var(--saffron-dark)}
+.hero{background:linear-gradient(135deg,#3D1500 0%,#7A2E00 45%,#B84700 100%);padding:52px 24px 64px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-om{font-size:72px;opacity:.12;position:absolute;right:10%;top:50%;transform:translateY(-50%);font-family:'Tiro Devanagari Sanskrit',serif;color:#fff;pointer-events:none}
+.hero h1{font-size:36px;font-weight:800;color:#fff;margin-bottom:10px;position:relative}
+.hero h1 span{color:#FFD580}
+.hero p{font-size:16px;color:rgba(255,255,255,.75);margin-bottom:32px;position:relative}
+.hero-search{max-width:680px;margin:0 auto;background:#fff;border-radius:14px;padding:8px;display:flex;gap:8px;box-shadow:0 8px 32px rgba(0,0,0,.25);position:relative}
+.hs-field{flex:1;display:flex;align-items:center;gap:8px;padding:0 12px;border-right:1px solid var(--border)}
+.hs-field:last-of-type{border-right:none}
+.hs-field .hs-icon{font-size:18px;flex-shrink:0}
+.hs-field input,.hs-field select{border:none;outline:none;font-size:14px;font-family:'Poppins',sans-serif;color:var(--text);background:transparent;width:100%}
+.hs-field select option{color:var(--text)}
+.hero-search .go-btn{padding:12px 28px;background:var(--saffron);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;flex-shrink:0;transition:.2s}
+.hero-search .go-btn:hover{background:var(--saffron-dark)}
+.hero-stats{display:flex;justify-content:center;gap:40px;margin-top:28px;position:relative}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:22px;font-weight:800;color:#FFD580}
+.hero-stat .lbl{font-size:12px;color:rgba(255,255,255,.65);margin-top:2px}
+.main{max-width:1200px;margin:0 auto;padding:28px 24px}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start}
+.sidebar{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;position:sticky;top:80px}
+.sidebar h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.filter-section{margin-bottom:20px}
+.filter-section h4{font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.fchip{padding:5px 12px;border-radius:20px;border:1px solid var(--border);font-size:12px;font-weight:500;cursor:pointer;color:var(--text2);background:var(--white);transition:.15s}
+.fchip:hover,.fchip.on{background:var(--saffron-light);border-color:var(--saffron);color:var(--saffron)}
+.filter-range{margin-top:8px}
+.filter-range input[type=range]{width:100%;accent-color:var(--saffron)}
+.filter-range .range-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--text3);margin-top:4px}
+.clear-filters{width:100%;padding:9px;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;margin-top:4px}
+.clear-filters:hover{border-color:var(--saffron);color:var(--saffron)}
+.results-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.results-header h2{font-size:20px;font-weight:700}
+.results-header h2 span{color:var(--saffron)}
+.sort-select{padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;color:var(--text);background:var(--white);outline:none;cursor:pointer}
+.sort-select:focus{border-color:var(--saffron)}
+.pcard{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:.2s;cursor:pointer;display:flex;flex-direction:column}
+.pcard:hover{border-color:var(--saffron);box-shadow:0 4px 20px rgba(232,89,12,.12);transform:translateY(-2px)}
+.pcard-banner{height:8px;background:linear-gradient(90deg,var(--saffron),var(--gold))}
+.pcard-body{padding:18px;flex:1}
+.pcard-top{display:flex;gap:14px;margin-bottom:14px}
+.pandit-avatar{width:64px;height:64px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:28px;border:2px solid var(--border)}
+.pcard-info{flex:1;min-width:0}
+.pcard-info h3{font-size:16px;font-weight:700;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px}
+.badge.verified{background:#E8F5E9;color:#2E7D32}
+.badge.lang{background:#EDE7F6;color:#4527A0}
+.badge.region{background:#FFF3E0;color:#E65100}
+.rating-row{display:flex;align-items:center;gap:8px}
+.rating{background:var(--green);color:#fff;font-size:12px;font-weight:700;padding:2px 7px;border-radius:4px;display:flex;align-items:center;gap:3px}
+.rating-count{font-size:12px;color:var(--text2)}
+.native-info{background:var(--saffron-light);border-radius:8px;padding:8px 12px;margin-bottom:12px;font-size:12px;color:#7A3000;display:flex;align-items:center;gap:6px}
+.pooja-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.pooja-tag{font-size:11px;padding:4px 10px;border-radius:6px;background:var(--cream);border:1px solid var(--border);color:var(--text2);font-weight:500}
+.pcard-footer{border-top:1px solid var(--border);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;background:#FAFAF8}
+.price-block{}
+.price-from{font-size:11px;color:var(--text3);font-weight:500}
+.price-val{font-size:18px;font-weight:800;color:var(--saffron)}
+.price-per{font-size:11px;color:var(--text2)}
+.book-now-btn{padding:9px 20px;background:var(--saffron);color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:.2s}
+.book-now-btn:hover{background:var(--saffron-dark)}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.no-results{text-align:center;padding:60px 20px;color:var(--text2)}
+.no-results .nr-icon{font-size:48px;margin-bottom:12px}
+.no-results h3{font-size:18px;font-weight:700;margin-bottom:6px;color:var(--text)}
+.no-results p{font-size:14px}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--white);border-radius:20px;width:100%;max-width:620px;max-height:90vh;overflow-y:auto;position:relative}
+.modal-header{background:linear-gradient(135deg,#7A2E00,#B84700);padding:28px;border-radius:20px 20px 0 0;color:#fff;display:flex;gap:18px;align-items:flex-start}
+.modal-avatar{width:80px;height:80px;border-radius:16px;border:3px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;background:rgba(255,255,255,.1)}
+.modal-title h2{font-size:22px;font-weight:800;margin-bottom:4px}
+.modal-title .m-loc{font-size:13px;opacity:.8;margin-bottom:8px}
+.modal-title .m-badges{display:flex;gap:6px;flex-wrap:wrap}
+.m-badge{font-size:11px;padding:3px 8px;border-radius:4px;font-weight:600}
+.m-badge.v{background:rgba(46,125,50,.3);color:#A5D6A7}
+.m-badge.l{background:rgba(255,255,255,.15);color:#fff}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,.2);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.modal-body{padding:24px}
+.m-section{margin-bottom:22px}
+.m-section h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text2);margin-bottom:12px}
+.m-native{background:var(--saffron-light);border-radius:10px;padding:14px;border-left:4px solid var(--saffron)}
+.m-native p{font-size:13px;color:#7A3000;line-height:1.7}
+.m-poojas{display:flex;flex-wrap:wrap;gap:8px}
+.m-pooja{padding:7px 14px;border-radius:8px;background:var(--cream);border:1px solid var(--border);font-size:13px;font-weight:500;color:var(--text)}
+.m-pooja .price{color:var(--saffron);font-weight:700;margin-left:6px}
+.m-reviews{display:flex;flex-direction:column;gap:12px}
+.review{background:var(--cream);border-radius:10px;padding:14px}
+.review-top{display:flex;justify-content:space-between;margin-bottom:6px}
+.reviewer{font-size:13px;font-weight:600}
+.rev-rating{font-size:12px;color:var(--gold);font-weight:700}
+.review p{font-size:13px;color:var(--text2);line-height:1.6}
+.book-form{display:flex;flex-direction:column;gap:14px}
+.book-form label{font-size:13px;font-weight:600;color:var(--text2);display:block;margin-bottom:5px}
+.book-form input,.book-form select{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:var(--text);outline:none}
+.book-form input:focus,.book-form select:focus{border-color:var(--saffron)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.confirm-btn{width:100%;padding:13px;background:var(--saffron);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;margin-top:4px}
+.confirm-btn:hover{background:var(--saffron-dark)}
+.success-box{display:none;text-align:center;padding:32px 24px}
+.success-box .s-icon{font-size:56px;margin-bottom:16px}
+.success-box h3{font-size:22px;font-weight:800;color:var(--green);margin-bottom:8px}
+.success-box p{font-size:14px;color:var(--text2);line-height:1.7}
+.reg-section{display:none}
+.reg-section.active{display:block}
+.reg-hero{background:linear-gradient(135deg,#3D1500,#7A2E00);padding:40px 24px;text-align:center;color:#fff}
+.reg-hero h1{font-size:30px;font-weight:800;margin-bottom:8px}
+.reg-hero p{font-size:15px;opacity:.8}
+.reg-form-wrap{max-width:640px;margin:32px auto;padding:0 24px}
+.form-card{background:var(--white);border-radius:16px;border:1px solid var(--border);padding:32px}
+.form-card h2{font-size:20px;font-weight:700;margin-bottom:6px}
+.form-card .fc-sub{font-size:14px;color:var(--text2);margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--text2);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:'Poppins',sans-serif;color:var(--text);outline:none;background:var(--white)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--saffron)}
+.field textarea{resize:vertical;min-height:90px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cb-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cb-item{display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:7px 10px;border-radius:7px;border:1px solid var(--border);transition:.15s}
+.cb-item:has(input:checked){background:var(--saffron-light);border-color:var(--saffron);color:var(--saffron)}
+.cb-item input{accent-color:var(--saffron)}
+.submit-btn{width:100%;padding:13px;background:var(--saffron);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;margin-top:8px;transition:.2s}
+.submit-btn:hover{background:var(--saffron-dark)}
+.reg-success{display:none;text-align:center;padding:40px 24px;background:var(--white);border-radius:16px;border:1px solid var(--border);margin:32px auto;max-width:480px}
+.reg-success .rs-icon{font-size:60px;margin-bottom:16px}
+.reg-success h2{font-size:24px;font-weight:800;color:var(--green);margin-bottom:8px}
+.reg-success p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:20px}
+.page-nav{display:flex;justify-content:center;gap:0;background:var(--white);border-top:1px solid var(--border);position:sticky;top:64px;z-index:90}
+.pnav-item{padding:14px 28px;font-size:14px;font-weight:600;cursor:pointer;color:var(--text2);border-bottom:2px solid transparent;transition:.2s}
+.pnav-item:hover{color:var(--saffron)}
+.pnav-item.active{color:var(--saffron);border-bottom-color:var(--saffron)}
+.section{display:none}
+.section.active{display:block}
+.cal-wrap{background:var(--cream);border-radius:12px;border:1px solid var(--border);padding:18px;margin-bottom:4px}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.cal-nav h3{font-size:15px;font-weight:700;color:var(--text)}
+.cal-nav-btn{width:32px;height:32px;border-radius:8px;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:.15s}
+.cal-nav-btn:hover{border-color:var(--saffron);color:var(--saffron)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal-dow{font-size:11px;font-weight:700;color:var(--text3);padding:4px 0;text-transform:uppercase;letter-spacing:.5px}
+.cal-day{width:100%;aspect-ratio:1;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:13px;font-weight:500;cursor:default;transition:.15s;position:relative;border:1.5px solid transparent}
+.cal-day.empty{background:transparent}
+.cal-day.past{color:var(--text3);background:transparent}
+.cal-day.booked{background:#FEE2E2;color:#B91C1C;text-decoration:line-through;font-size:12px}
+.cal-day.booked::after{content:'✕';font-size:9px;color:#B91C1C;line-height:1}
+.cal-day.available{background:var(--green-light);color:var(--green);cursor:pointer;font-weight:600}
+.cal-day.available:hover{background:#C8E6C9;border-color:var(--green);transform:scale(1.08)}
+.cal-day.available::after{content:'✓';font-size:9px;color:var(--green);line-height:1}
+.cal-day.today{border-color:var(--saffron)!important;font-weight:700}
+.cal-day.selected{background:var(--saffron)!important;color:#fff!important;border-color:var(--saffron-dark)!important;transform:scale(1.1)}
+.cal-day.selected::after{content:'';display:none}
+.cal-legend{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.cal-legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)}
+.cal-legend-dot{width:10px;height:10px;border-radius:3px}
+.slots-wrap{margin-top:14px}
+.slots-wrap h4{font-size:12px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.7px;margin-bottom:10px}
+.slots-grid{display:flex;flex-wrap:wrap;gap:8px}
+.slot{padding:6px 14px;border-radius:8px;border:1px solid var(--border);font-size:13px;font-weight:500;cursor:pointer;background:var(--white);color:var(--text);transition:.15s}
+.slot:hover{border-color:var(--saffron);color:var(--saffron)}
+.slot.slot-sel{background:var(--saffron);color:#fff;border-color:var(--saffron-dark)}
+.slot.slot-taken{background:#FEE2E2;color:#B91C1C;text-decoration:line-through;cursor:not-allowed;border-color:#FECACA}
+.avail-banner{display:flex;align-items:center;gap:8px;background:var(--green-light);border:1px solid #A5D6A7;border-radius:8px;padding:10px 14px;font-size:13px;color:var(--green);font-weight:500;margin-bottom:12px}
+.avail-banner.none{background:#FEE2E2;border-color:#FECACA;color:#B91C1C}
+/* ── WHATSAPP FLOAT BUTTON ── */
+.wa-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:999;transition:transform .2s;}
+.wa-float:hover{transform:scale(1.08);}
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .hero h1{font-size:26px}
+  .hero-search{flex-direction:column}
+  .hs-field{border-right:none;border-bottom:1px solid var(--border)}
+  .hero-stats{gap:24px}
+  .field-row{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .header-inner{gap:10px}
+  .nav-links .nav-btn.ghost{display:none}
+}
+</style>
+</head> <body>
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#" onclick="showSection('home')">पंडितजी <sub>PanditJi</sub></a>
+    <button class="loc-btn" id="loc-btn">
+      <span class="loc-dot"></span>
+      <span id="loc-text">Bengaluru</span> ▾
+    </button>
+    <div class="search-bar">
+      <span class="s-icon">🔍</span>
+      <input type="text" placeholder="Search pandits, poojas, localities..." id="header-search" oninput="liveSearch(this.value)"/>
+    </div>
+    <div class="nav-links">
+      <button class="nav-btn ghost" onclick="showSection('register')">Register as Pandit</button>
+      <button class="nav-btn fill" onclick="showSection('home')">Find Pandit</button>
+    </div>
+  </div>
+</header>
+<!-- PAGE NAV -->
+<div class="page-nav">
+  <div class="pnav-item active" id="nav-home" onclick="showSection('home')">🏠 Find Pandits</div>
+  <div class="pnav-item" id="nav-register" onclick="showSection('register')">📝 Pandit Registration</div>
+  <div class="pnav-item" id="nav-how" onclick="showSection('how')">❓ How it Works</div>
+</div>
+<!-- HOME SECTION -->
+<div class="section active" id="section-home">
+  <div class="hero">
+    <div class="hero-om">ॐ</div>
+    <h1>Find the <span>Right Pandit</span> for Every Pooja</h1>
+    <p>Verified pandits from your region, in your language, for your traditions</p>
+    <div class="hero-search">
+      <div class="hs-field">
+        <span class="hs-icon">📍</span>
+        <input type="text" placeholder="Your city or locality" id="hero-city"/>
+      </div>
+      <div class="hs-field">
+        <span class="hs-icon">🪔</span>
+        <select id="hero-pooja">
+          <option value="">All Poojas</option>
+          <option>Griha Pravesh</option>
+          <option>Satyanarayan Katha</option>
+          <option>Ganesh Pooja</option>
+          <option>Wedding / Vivah</option>
+          <option>Navratri Pooja</option>
+          <option>Namkaran Sanskar</option>
+          <option>Mundan Ceremony</option>
+          <option>Pitru Paksha</option>
+          <option>Kali Pooja</option>
+          <option>Durga Pooja</option>
+        </select>
+      </div>
+      <div class="hs-field">
+        <span class="hs-icon">🗣️</span>
+        <select id="hero-lang">
+          <option value="">Any Language</option>
+          <option>Hindi</option>
+          <option>Sanskrit</option>
+          <option>Kannada</option>
+          <option>Tamil</option>
+          <option>Telugu</option>
+          <option>Bengali</option>
+          <option>Marathi</option>
+          <option>Gujarati</option>
+          <option>Odia</option>
+        </select>
+      </div>
+      <button class="go-btn" onclick="heroSearch()">Search</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">2,400+</div><div class="lbl">Verified Pandits</div></div>
+      <div class="hero-stat"><div class="num">18</div><div class="lbl">States Covered</div></div>
+      <div class="hero-stat"><div class="num">50,000+</div><div class="lbl">Poojas Completed</div></div>
+      <div class="hero-stat"><div class="num">4.8★</div><div class="lbl">Avg. Rating</div></div>
+    </div>
+  </div>
+  <!-- MAIN LAYOUT -->
+  <div class="main">
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <h3>🎛️ Filters</h3>
+        <div class="filter-section">
+          <h4>Pooja Type</h4>
+          <div class="filter-chips" id="f-pooja">
+            <div class="fchip on" onclick="toggleChip(this,'pooja','')">All</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Griha Pravesh')">Griha Pravesh</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Satyanarayan')">Satyanarayan</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Ganesh Pooja')">Ganesh Pooja</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Wedding')">Wedding</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Navratri')">Navratri</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Namkaran')">Namkaran</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Mundan')">Mundan</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Kali Pooja')">Kali Pooja</div>
+            <div class="fchip" onclick="toggleChip(this,'pooja','Durga Pooja')">Durga Pooja</div>
+          </div>
+        </div>
+        <div class="filter-section">
+          <h4>Native Region</h4>
+          <div class="filter-chips" id="f-region">
+            <div class="fchip on" onclick="toggleChip(this,'region','')">All</div>
+            <div class="fchip" onclick="toggleChip(this,'region','North India')">North India</div>
+            <div class="fchip" onclick="toggleChip(this,'region','South India')">South India</div>
+            <div class="fchip" onclick="toggleChip(this,'region','Bengal')">Bengal</div>
+            <div class="fchip" onclick="toggleChip(this,'region','Maharashtra')">Maharashtra</div>
+            <div class="fchip" onclick="toggleChip(this,'region','Gujarat')">Gujarat</div>
+            <div class="fchip" onclick="toggleChip(this,'region','Odisha')">Odisha</div>
+          </div>
+        </div>
+        <div class="filter-section">
+          <h4>Language</h4>
+          <div class="filter-chips" id="f-lang">
+            <div class="fchip on" onclick="toggleChip(this,'lang','')">All</div>
+            <div class="fchip" onclick="toggleChip(this,'lang','Hindi')">Hindi</div>
+            <div class="fchip" onclick="toggleChip(this,'lang','Kannada')">Kannada</div>
+            <div class="fchip" onclick="toggleChip(this,'lang','Tamil')">Tamil</div>
+            <div class="fchip" onclick="toggleChip(this,'lang','Telugu')">Telugu</div>
+            <div class="fchip" onclick="toggleChip(this,'lang','Bengali')">Bengali</div>
+            <div class="fchip" onclick="toggleChip(this,'lang','Marathi')">Marathi</div>
+            <div class="fchip" onclick="toggleChip(this,'lang','Gujarati')">Gujarati</div>
+          </div>
+        </div>
+        <div class="filter-section">
+          <h4>Budget (Starting Fee)</h4>
+          <div class="filter-range">
+            <input type="range" min="500" max="10000" value="10000" step="500" id="fee-range" oninput="updateFeeFilter(this.value)"/>
+            <div class="range-labels"><span>₹500</span><span id="fee-val">Any</span></div>
+          </div>
+        </div>
+        <div class="filter-section">
+          <h4>Minimum Rating</h4>
+          <div class="filter-chips" id="f-rating">
+            <div class="fchip on" onclick="toggleChip(this,'rating',0)">All</div>
+            <div class="fchip" onclick="toggleChip(this,'rating',4)">4.0+</div>
+            <div class="fchip" onclick="toggleChip(this,'rating',4.5)">4.5+</div>
+            <div class="fchip" onclick="toggleChip(this,'rating',4.8)">4.8+</div>
+          </div>
+        </div>
+        <button class="clear-filters" onclick="clearFilters()">✕ Clear All Filters</button>
+      </aside>
+      <!-- RESULTS -->
+      <div>
+        <div class="results-header">
+          <h2 id="results-title">Pandits near <span>Bengaluru</span></h2>
+          <select class="sort-select" onchange="sortPandits(this.value)">
+            <option value="rating">Sort: Top Rated</option>
+            <option value="price_low">Price: Low to High</option>
+            <option value="price_high">Price: High to Low</option>
+            <option value="reviews">Most Reviews</option>
+          </select>
+        </div>
+        <div class="cards-grid" id="cards-grid"></div>
+      </div>
+    </div>
+  </div>
+</div> <!-- REGISTER SECTION -->
+<div class="section" id="section-register">
+  <div class="reg-hero">
+    <h1>🙏 Register as a Pandit</h1>
+    <p>Join thousands of pandits and connect with devotees across India</p>
+  </div>
+  <div class="reg-form-wrap">
+    <div class="form-card" id="reg-form-card">
+      <h2>Pandit Profile Registration</h2>
+      <div class="fc-sub">Fill in your details to get listed on PanditJi. Our team will verify and activate your profile within 24 hours.</div>
+      <div class="field-row">
+        <div class="field"><label>Full Name *</label><input id="r-name" placeholder="Pt. Ramesh Sharma"/></div>
+        <div class="field"><label>Phone Number *</label><input id="r-phone" placeholder="+91 98765 43210"/></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Current City *</label><input id="r-city" placeholder="e.g. Bengaluru"/></div>
+        <div class="field"><label>Locality / Area</label><input id="r-area" placeholder="e.g. Indiranagar"/></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Native State / Region *</label>
+          <select id="r-region">
+            <option value="">Select your native region</option>
+            <option>North India (UP, Bihar, MP)</option>
+            <option>Uttarakhand / Himachal</option>
+            <option>Rajasthan</option>
+            <option>Maharashtra</option>
+            <option>Gujarat</option>
+            <option>Bengal</option>
+            <option>Odisha</option>
+            <option>South India (Karnataka)</option>
+            <option>South India (Tamil Nadu)</option>
+            <option>South India (Andhra / Telangana)</option>
+            <option>Kerala</option>
+            <option>Punjab / Haryana</option>
+          </select>
+        </div>
+        <div class="field"><label>Years of Experience *</label><input id="r-exp" type="number" placeholder="e.g. 15" min="0"/></div>
+      </div>
+      <div class="field">
+        <label>Languages You Can Conduct Poojas In</label>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox" value="Sanskrit"> Sanskrit</label>
+          <label class="cb-item"><input type="checkbox" value="Hindi"> Hindi</label>
+          <label class="cb-item"><input type="checkbox" value="Kannada"> Kannada</label>
+          <label class="cb-item"><input type="checkbox" value="Tamil"> Tamil</label>
+          <label class="cb-item"><input type="checkbox" value="Telugu"> Telugu</label>
+          <label class="cb-item"><input type="checkbox" value="Bengali"> Bengali</label>
+          <label class="cb-item"><input type="checkbox" value="Marathi"> Marathi</label>
+          <label class="cb-item"><input type="checkbox" value="Gujarati"> Gujarati</label>
+          <label class="cb-item"><input type="checkbox" value="Odia"> Odia</label>
+          <label class="cb-item"><input type="checkbox" value="Punjabi"> Punjabi</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Poojas You Specialise In (Select all that apply)</label>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox"> Griha Pravesh</label>
+          <label class="cb-item"><input type="checkbox"> Satyanarayan Katha</label>
+          <label class="cb-item"><input type="checkbox"> Ganesh Pooja</label>
+          <label class="cb-item"><input type="checkbox"> Wedding / Vivah</label>
+          <label class="cb-item"><input type="checkbox"> Navratri Pooja</label>
+          <label class="cb-item"><input type="checkbox"> Namkaran Sanskar</label>
+          <label class="cb-item"><input type="checkbox"> Mundan Ceremony</label>
+          <label class="cb-item"><input type="checkbox"> Pitru Paksha</label>
+          <label class="cb-item"><input type="checkbox"> Kali Pooja</label>
+          <label class="cb-item"><input type="checkbox"> Durga Pooja</label>
+          <label class="cb-item"><input type="checkbox"> Vastu Pooja</label>
+          <label class="cb-item"><input type="checkbox"> Rudrabhishek</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Regional Specialisation (What regional traditions do you know?)</label>
+        <textarea id="r-regional" placeholder="e.g. I specialise in Bengali Durga Pooja rituals, including the traditional Sandhi Pooja and Kumari Pooja ceremonies that are specific to Bengal..."></textarea>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Starting Fee (₹) *</label><input id="r-fee" type="number" placeholder="e.g. 1100" min="0"/></div>
+        <div class="field"><label>Profile Photo (optional)</label><input type="file" accept="image/*" id="r-photo" style="padding:6px"/></div>
+      </div>
+      <div class="field">
+        <label>About Yourself</label>
+        <textarea id="r-about" placeholder="Introduce yourself — your lineage, training, areas of expertise, and what makes your approach special..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="submitReg()">🙏 Submit Registration</button>
+    </div>
+    <div class="reg-success" id="reg-success">
+      <div class="rs-icon">🙏</div>
+      <h2>Registration Submitted!</h2>
+      <p>Thank you for registering on PanditJi. Our verification team will review your profile and contact you on your registered number within <strong>24 hours</strong>.</p>
+      <button class="submit-btn" style="max-width:260px;margin:0 auto" onclick="resetReg()">Register Another Pandit</button>
+    </div>
+  </div>
+</div>
+<!-- HOW IT WORKS SECTION -->
+<div class="section" id="section-how">
+  <div class="main" style="max-width:900px">
+    <h2 style="font-size:28px;font-weight:800;text-align:center;margin-bottom:6px">How PanditJi Works</h2>
+    <p style="text-align:center;color:var(--text2);margin-bottom:40px;font-size:15px">Simple, trusted, and respectful of your traditions</p>
+    <h3 style="font-size:16px;font-weight:700;color:var(--saffron);margin-bottom:16px">For Devotees 🙏</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:40px">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">📍</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 1</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Enter Location</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Search by your city, area, or pin code to find pandits nearby</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">🔍</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 2</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Filter by Tradition</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Filter by pooja type, native region, language and budget</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">👤</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 3</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">View Profile</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Check ratings, reviews, native region and regional specialisations</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">📅</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 4</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Book Online</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Select date, time and pooja type and confirm your booking</div>
+      </div>
+    </div>
+    <h3 style="font-size:16px;font-weight:700;color:var(--saffron);margin-bottom:16px">For Pandits 🕉️</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:40px">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">📝</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 1</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Register Free</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Create your profile with your specialisations, native region and languages</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">✅</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 2</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Get Verified</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Our team verifies your credentials and activates your listing within 24 hours</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">🌟</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 3</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Get Discovered</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Appear in searches for devotees in your city looking for your expertise</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:32px;margin-bottom:10px">💰</div>
+        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 4</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Earn & Grow</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.5">Receive bookings, collect reviews and grow your devotee base across India</div>
+      </div>
+    </div>
+    <div style="background:var(--saffron-light);border-radius:14px;padding:24px;border-left:5px solid var(--saffron);margin-bottom:32px">
+      <h3 style="font-size:16px;font-weight:700;color:#7A3000;margin-bottom:8px">🌍 Why Regional Pandits Matter</h3>
+      <p style="font-size:14px;color:#7A3000;line-height:1.8">India has hundreds of regional pooja traditions that differ by state, community and even village. A Bengali Durga Pooja requires specific rituals like <strong>Sandhi Pooja</strong> that only a pandit trained in Bengal's tradition would know. Similarly, a South Indian Griha Pravesh follows a completely different Agamic tradition. PanditJi lets you filter by native region so you can find a pandit who truly understands your family's traditions.</p>
+    </div>
+  </div>
+</div>
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-header" id="modal-header">
+      <div class="modal-avatar" id="m-avatar"></div>
+      <div class="modal-title">
+        <h2 id="m-name"></h2>
+        <div class="m-loc" id="m-loc"></div>
+        <div class="m-badges" id="m-badges"></div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="m-section">
+        <h4>🌍 Native Region & Specialisation</h4>
+        <div class="m-native" id="m-native"></div>
+      </div>
+      <div class="m-section">
+        <h4>🪔 Poojas & Pricing</h4>
+        <div class="m-poojas" id="m-poojas"></div>
+      </div>
+      <div class="m-section">
+        <h4>⭐ Reviews</h4>
+        <div class="m-reviews" id="m-reviews"></div>
+      </div>
+      <div class="m-section">
+        <h4>📅 Availability Calendar</h4>
+        <div class="cal-wrap">
+          <div class="cal-nav">
+            <button class="cal-nav-btn" onclick="calPrev()">‹</button>
+            <h3 id="cal-month-label"></h3>
+            <button class="cal-nav-btn" onclick="calNext()">›</button>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+          <div class="cal-legend">
+            <div class="cal-legend-item"><div class="cal-legend-dot" style="background:var(--green-light);border:1px solid var(--green)"></div> Available</div>
+            <div class="cal-legend-item"><div class="cal-legend-dot" style="background:#FEE2E2;border:1px solid #FECACA"></div> Booked</div>
+            <div class="cal-legend-item"><div class="cal-legend-dot" style="border:1.5px solid var(--saffron)"></div> Today</div>
+            <div class="cal-legend-item"><div class="cal-legend-dot" style="background:var(--saffron)"></div> Selected</div>
+          </div>
+        </div>
+        <div class="slots-wrap" id="slots-wrap" style="display:none">
+          <h4>Available Time Slots</h4>
+          <div id="avail-banner" class="avail-banner"></div>
+          <div class="slots-grid" id="slots-grid"></div>
+        </div>
+      </div>
+      <div class="m-section">
+        <h4>📋 Book This Pandit</h4>
+        <div class="book-form" id="book-form">
+          <div class="row2">
+            <div><label>Your Name</label><input id="b-name" placeholder="Your full name"/></div>
+            <div><label>Phone Number</label><input id="b-phone" placeholder="+91 XXXXX XXXXX"/></div>
+          </div>
+          <div class="row2">
+            <div><label>Pooja Type</label>
+              <select id="b-pooja">
+                <option>Griha Pravesh</option>
+                <option>Satyanarayan Katha</option>
+                <option>Ganesh Pooja</option>
+                <option>Wedding / Vivah</option>
+                <option>Navratri Pooja</option>
+                <option>Namkaran Sanskar</option>
+                <option>Mundan Ceremony</option>
+              </select>
+            </div>
+            <div><label>Date</label><input type="date" id="b-date"/></div>
+          </div>
+          <div class="row2">
+            <div><label>Time</label><input type="time" id="b-time" value="10:00"/></div>
+            <div><label>Your Address</label><input id="b-addr" placeholder="Full address"/></div>
+          </div>
+          <button class="confirm-btn" onclick="confirmBooking()">🙏 Confirm Booking</button>
+        </div>
+        <div class="success-box" id="booking-success">
+          <div class="s-icon">🎉</div>
+          <h3>Booking Confirmed!</h3>
+          <p id="booking-msg"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <script>
+function genAvailability(seed) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const booked = new Set();
+  const avail = {};
+  for (let i = 1; i <= 60; i++) {
+    const d = new Date(today); d.setDate(d.getDate() + i);
+    const key = d.toISOString().slice(0,10);
+    const r = ((seed * 9301 + i * 49297) % 233280) / 233280;
+    if (r < 0.28) { booked.add(key); continue; }
+    if (r < 0.85) {
+      const allSlots = ['6:00 AM','7:00 AM','8:00 AM','9:00 AM','10:00 AM','11:00 AM','4:00 PM','5:00 PM','6:00 PM'];
+      const numSlots = 2 + Math.floor(r * 5);
+      const shuffled = allSlots.sort(() => r - 0.5).slice(0, numSlots);
+      const takenCount = Math.floor(r * 2);
+      avail[key] = shuffled.map((s, idx) => ({ time: s, taken: idx < takenCount }));
+    }
+  }
+  return { booked, avail };
+}
+const pandits = [
+  {id:1,name:"Pt. Ramesh Sharma",city:"Bengaluru",area:"Indiranagar",native:"North India (UP)",nativeDetail:"Trained in Varanasi in the traditional Kashi Pandit lineage. Specialises in North Indian Griha Pravesh rituals including the full Vastu Shanti with 16-step process unique to UP-Bihar tradition.",lang:["Hindi","Sanskrit"],rating:4.9,reviews:87,fee:1100,emoji:"🧘",bg:"#FFF3E0",poojas:[{n:"Griha Pravesh",p:1100},{n:"Satyanarayan Katha",p:1501},{n:"Ganesh Pooja",p:800},{n:"Namkaran Sanskar",p:1200}],verified:true,reviewList:[{u:"Suresh K.",r:"5.0★",t:"Excellent pooja, very detailed rituals and explained everything in Hindi. Highly recommend!"},{u:"Priya M.",r:"4.8★",t:"Very knowledgeable about North Indian traditions. Our Griha Pravesh was beautiful."}]},
+  {id:2,name:"Pt. Krishnamurthy Iyengar",city:"Bengaluru",area:"Jayanagar",native:"South India (Tamil Nadu)",nativeDetail:"Fourth-generation Iyengar priest trained in the Pancharatra Agama tradition. Expert in South Indian Griha Pravesh (Vasthu Shanthi), Upanayana, and Tamil Brahmin wedding rituals that follow the Apastamba Sutra.",lang:["Tamil","Sanskrit","Kannada"],rating:4.8,reviews:124,fee:1500,emoji:"🕉",bg:"#E8F5E9",poojas:[{n:"Griha Pravesh (Agamic)",p:2100},{n:"Wedding / Vivah",p:5100},{n:"Satyanarayan",p:1500},{n:"Upanayana",p:3500}],verified:true,reviewList:[{u:"Lakshmi R.",r:"5.0★",t:"He knows every detail of Tamil Brahmin rituals. We were so happy to find a pandit who understood our exact traditions."},{u:"Venkat A.",r:"4.7★",t:"Exceptional. He even recited rare Tamil Vedic hymns we had not heard before."}]},
+  {id:3,name:"Pt. Debashish Bhattacharya",city:"Bengaluru",area:"Whitefield",native:"Bengal",nativeDetail:"Born in Nabadwip (West Bengal), the seat of Vaishnava learning. Expert in Bengali Durga Pooja traditions including Sandhi Pooja, Kumari Pooja, and Dhuno Naach. Also performs Kali Pooja and Lakshmi Pooja as per Shakta Tantra tradition.",lang:["Bengali","Sanskrit","Hindi"],rating:4.9,reviews:63,fee:1800,emoji:"🌸",bg:"#FCE4EC",poojas:[{n:"Durga Pooja",p:5100},{n:"Kali Pooja",p:2100},{n:"Lakshmi Pooja",p:1100},{n:"Griha Pravesh",p:1800},{n:"Namkaran Sanskar",p:1500}],verified:true,reviewList:[{u:"Rina D.",r:"5.0★",t:"Finally a pandit in Bengaluru who knows real Bengali Durga Pooja! Sandhi Pooja was perfect."},{u:"Subhasish B.",r:"4.9★",t:"He knew every small detail of the Bangla tradition. Felt like home."}]},
+  {id:4,name:"Pt. Ganesh Joshi",city:"Mumbai",area:"Dadar",native:"Maharashtra",nativeDetail:"From a Kokanastha Brahmin family in Ratnagiri. Expert in Maharashtrian Ganeshotsav traditions including 10-day Ganpati pooja as per Ganapatya sect. Also specialises in Satyanarayan Mahapooja and Vastu Shanti as per Marathi tradition.",lang:["Marathi","Sanskrit","Hindi"],rating:4.7,reviews:98,fee:1200,emoji:"🙏",bg:"#EDE7F6",poojas:[{n:"Ganesh Pooja",p:1200},{n:"Satyanarayan",p:1500},{n:"Griha Pravesh",p:1800},{n:"Mundan",p:1100},{n:"Wedding",p:4500}],verified:true,reviewList:[{u:"Anand P.",r:"4.8★",t:"Wonderful Ganpati pooja following the authentic Pune tradition. Jai Ganesh!"},{u:"Meena T.",r:"4.7★",t:"Very knowledgeable about Maharashtrian rituals, spoke in Marathi throughout."}]},
+  {id:5,name:"Pt. Venkateshwara Rao",city:"Hyderabad",area:"Banjara Hills",native:"South India (Andhra / Telangana)",nativeDetail:"Smartha Brahmin trained in Andhra Pancharatragama. Specialises in Telugu Brahmin rituals including Seemantham, Shodasha Samskaras, and Tirupati-tradition Satyanarayan Vratam. Fluent in Telugu Vedic chanting.",lang:["Telugu","Sanskrit"],rating:4.6,reviews:71,fee:900,emoji:"✨",bg:"#E3F2FD",poojas:[{n:"Satyanarayan",p:900},{n:"Griha Pravesh",p:1500},{n:"Seemantham",p:2100},{n:"Namkaran",p:1100},{n:"Wedding",p:4000}],verified:true,reviewList:[{u:"Krishna R.",r:"4.6★",t:"He performed our Seemantham exactly as our grandmother described it. Truly authentic Telugu rituals."},{u:"Padma S.",r:"4.7★",t:"Very experienced, knew all our Andhra Brahmin customs without us explaining anything."}]},
+  {id:6,name:"Pt. Arun Kulkarni",city:"Pune",area:"Kothrud",native:"Maharashtra",nativeDetail:"From a Deshastha Brahmin family in Satara. Expert in Maharashtrian traditions including Wari rituals, Namasamkirtana and the Vithoba tradition. Also performs Navratri Ghatasthapana with authentic Devi Mahatmya recitation.",lang:["Marathi","Hindi","Sanskrit"],rating:4.8,reviews:73,fee:1300,emoji:"🪔",bg:"#FFF8E1",poojas:[{n:"Navratri Pooja",p:2100},{n:"Ganesh Pooja",p:1300},{n:"Wedding",p:4500},{n:"Mundan",p:1100}],verified:false,reviewList:[{u:"Rajesh K.",r:"4.8★",t:"He knew all the Navratri rituals in detail. A true scholar of Maharashtrian traditions."},{u:"Sunita M.",r:"4.9★",t:"Our Ghatasthapana was exactly as our family has done for generations."}]},
+  {id:7,name:"Pt. Subhash Mishra",city:"Delhi",area:"Laxmi Nagar",native:"North India (UP, Bihar, MP)",nativeDetail:"From Prayagraj (Allahabad), trained at Sringeri Math. Expert in North Indian Vivah Samskar with all 7 pheras and Saptapadi as per Paraskara Grihyasutra. Also performs Pitru Paksha Shradha and Pind Daan.",lang:["Hindi","Sanskrit"],rating:4.9,reviews:152,fee:2000,emoji:"🌟",bg:"#FFFBEC",poojas:[{n:"Wedding / Vivah",p:7500},{n:"Griha Pravesh",p:2000},{n:"Satyanarayan",p:1500},{n:"Pitru Paksha",p:3100}],verified:true,reviewList:[{u:"Amit S.",r:"5.0★",t:"The most authentic North Indian wedding ritual I have witnessed. Every step explained perfectly."},{u:"Kavita J.",r:"4.9★",t:"We specifically wanted a Prayagraj pandit for our Pitru Paksha — he was absolutely perfect."}]},
+  {id:8,name:"Pt. Jagannath Panda",city:"Bhubaneswar",area:"Saheed Nagar",native:"Odisha",nativeDetail:"Trained in the Jagannath Temple's Brahmin lineage. Expert in Odia rituals including Satyapir Pooja, Lakshmi Pooja on Thursday (Gurubara), and the rare Chandan Yatra pooja. Specialises in rituals following Odia tradition.",lang:["Odia","Sanskrit","Hindi"],rating:4.7,reviews:44,fee:800,emoji:"🏵",bg:"#E8F5E9",poojas:[{n:"Lakshmi Pooja",p:800},{n:"Satyapir Pooja",p:1100},{n:"Griha Pravesh",p:1500},{n:"Namkaran",p:900}],verified:true,reviewList:[{u:"Bibhu P.",r:"4.8★",t:"He performed Gurubara Lakshmi Pooja just like my grandmother used to — rare to find in a new city."},{u:"Sarita M.",r:"4.6★",t:"Very authentic Odia rituals with proper Odia hymns."}]},
+];
+let activeFilters = {pooja:'',region:'',lang:'',fee:10000,rating:0,search:''};
+let sortMode = 'rating';
+let currentPandit = null;
+let calYear, calMonth, calAvailability = null;
+let selectedDate = null, selectedSlot = null;
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+function initCalendar(pandit) {
+  const today = new Date();
+  calYear = today.getFullYear();
+  calMonth = today.getMonth();
+  calAvailability = genAvailability(pandit.id * 37 + 13);
+  selectedDate = null; selectedSlot = null;
+  renderCalendar();
+  document.getElementById('slots-wrap').style.display = 'none';
+}
+function renderCalendar() {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const label = document.getElementById('cal-month-label');
+  label.textContent = MONTHS[calMonth] + ' ' + calYear;
+  const grid = document.getElementById('cal-grid');
+  let html = DAYS.map(d => `<div class="cal-dow">${d}</div>`).join('');
+  const firstDay = new Date(calYear, calMonth, 1).getDay();
+  const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+  for (let i = 0; i < firstDay; i++) html += `<div class="cal-day empty"></div>`;
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = new Date(calYear, calMonth, d);
+    const key = date.toISOString().slice(0,10);
+    const isPast = date < today;
+    const isToday = date.getTime() === today.getTime();
+    const isSelected = selectedDate === key;
+    const isBooked = calAvailability.booked.has(key);
+    const isAvail = !isPast && !isBooked && calAvailability.avail[key];
+    let cls = 'cal-day';
+    if (isPast) cls += ' past';
+    else if (isBooked) cls += ' booked';
+    else if (isAvail) cls += ' available';
+    if (isToday) cls += ' today';
+    if (isSelected) cls += ' selected';
+    const click = isAvail ? `onclick="selectDate('${key}')"` : '';
+    html += `<div class="${cls}" ${click}>${d}</div>`;
+  }
+  grid.innerHTML = html;
+}
+function selectDate(key) {
+  selectedDate = key;
+  selectedSlot = null;
+  renderCalendar();
+  const slots = calAvailability.avail[key] || [];
+  const wrap = document.getElementById('slots-wrap');
+  const banner = document.getElementById('avail-banner');
+  const grid = document.getElementById('slots-grid');
+  wrap.style.display = 'block';
+  const d = new Date(key);
+  const label = d.toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long'});
+  const freeCount = slots.filter(s => !s.taken).length;
+  if (freeCount > 0) {
+    banner.className = 'avail-banner';
+    banner.innerHTML = `✅ <strong>${freeCount} slot${freeCount>1?'s':''} available</strong> on ${label}`;
+  } else {
+    banner.className = 'avail-banner none';
+    banner.innerHTML = `❌ No free slots on ${label} — please choose another date`;
+  }
+  grid.innerHTML = slots.map(s =>
+    `<div class="slot ${s.taken?'slot-taken':''}" ${!s.taken?`onclick="selectSlot(this,'${s.time}')"`:''}>${s.time}${s.taken?' (Booked)':''}</div>`
+  ).join('');
+  document.getElementById('b-date').value = key;
+  wrap.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+function selectSlot(el, time) {
+  document.querySelectorAll('.slot').forEach(s => s.classList.remove('slot-sel'));
+  el.classList.add('slot-sel');
+  selectedSlot = time;
+  const [t, period] = time.split(' ');
+  let [h, m] = t.split(':').map(Number);
+  if (period === 'PM' && h !== 12) h += 12;
+  if (period === 'AM' && h === 12) h = 0;
+  document.getElementById('b-time').value = `${String(h).padStart(2,'0')}:${String(m||0).padStart(2,'0')}`;
+}
+function calPrev() {
+  calMonth--;
+  if (calMonth < 0) { calMonth = 11; calYear--; }
+  renderCalendar();
+}
+function calNext() {
+  calMonth++;
+  if (calMonth > 11) { calMonth = 0; calYear++; }
+  renderCalendar();
+}
+function renderCards(list){
+  const grid = document.getElementById('cards-grid');
+  if(!list.length){
+    grid.innerHTML=`<div class="no-results" style="grid-column:1/-1"><div class="nr-icon">🙏</div><h3>No Pandits Found</h3><p>Try changing your filters or search query</p></div>`;
+    return;
+  }
+  grid.innerHTML = list.map(p=>`
+    <div class="pcard" onclick="openModal(${p.id})">
+      <div class="pcard-banner"></div>
+      <div class="pcard-body">
+        <div class="pcard-top">
+          <div class="pandit-avatar" style="background:${p.bg}">${p.emoji}</div>
+          <div class="pcard-info">
+            <h3>${p.name}</h3>
+            <div class="badge-row">
+              ${p.verified?'<span class="badge verified">✓ Verified</span>':''}
+              ${p.lang.map(l=>`<span class="badge lang">${l}</span>`).join('')}
+            </div>
+            <div class="rating-row">
+              <div class="rating">★ ${p.rating}</div>
+              <div class="rating-count">(${p.reviews} reviews)</div>
+            </div>
+          </div>
+        </div>
+        <div class="native-info">🌍 ${p.native} · ${p.area}, ${p.city}</div>
+        <div class="pooja-tags">${p.poojas.slice(0,4).map(pt=>`<span class="pooja-tag">${pt.n}</span>`).join('')}</div>
+      </div>
+      <div class="pcard-footer">
+        <div class="price-block">
+          <div class="price-from">Starting from</div>
+          <div><span class="price-val">₹${p.fee.toLocaleString()}</span> <span class="price-per">/ ceremony</span></div>
+        </div>
+        <button class="book-now-btn" onclick="event.stopPropagation();openModal(${p.id})">Book Now</button>
+      </div>
+    </div>
+  `).join('');
+}
+function getFiltered(){
+  let list = pandits.filter(p=>{
+    if(activeFilters.pooja && !p.poojas.some(pt=>pt.n.toLowerCase().includes(activeFilters.pooja.toLowerCase()))) return false;
+    if(activeFilters.region && !p.native.toLowerCase().includes(activeFilters.region.toLowerCase())) return false;
+    if(activeFilters.lang && !p.lang.some(l=>l.toLowerCase().includes(activeFilters.lang.toLowerCase()))) return false;
+    if(p.fee > activeFilters.fee) return false;
+    if(p.rating < activeFilters.rating) return false;
+    if(activeFilters.search){
+      const s = activeFilters.search.toLowerCase();
+      if(!p.name.toLowerCase().includes(s) && !p.city.toLowerCase().includes(s) && !p.area.toLowerCase().includes(s) && !p.native.toLowerCase().includes(s) && !p.poojas.some(pt=>pt.n.toLowerCase().includes(s))) return false;
+    }
+    return true;
+  });
+  if(sortMode==='rating') list.sort((a,b)=>b.rating-a.rating);
+  else if(sortMode==='price_low') list.sort((a,b)=>a.fee-b.fee);
+  else if(sortMode==='price_high') list.sort((a,b)=>b.fee-a.fee);
+  else if(sortMode==='reviews') list.sort((a,b)=>b.reviews-a.reviews);
+  return list;
+}
+function applyFilters(){ renderCards(getFiltered()); }
+function toggleChip(el, type, val){
+  document.querySelectorAll(`#f-${type} .fchip`).forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+  activeFilters[type] = val;
+  applyFilters();
+}
+function updateFeeFilter(v){
+  activeFilters.fee = parseInt(v);
+  document.getElementById('fee-val').textContent = v==10000?'Any':'₹'+parseInt(v).toLocaleString();
+  applyFilters();
+}
+function clearFilters(){
+  activeFilters = {pooja:'',region:'',lang:'',fee:10000,rating:0,search:''};
+  document.querySelectorAll('.fchip').forEach(c=>c.classList.remove('on'));
+  document.querySelectorAll('#f-pooja .fchip:first-child,#f-region .fchip:first-child,#f-lang .fchip:first-child,#f-rating .fchip:first-child').forEach(c=>c.classList.add('on'));
+  document.getElementById('fee-range').value=10000;
+  document.getElementById('fee-val').textContent='Any';
+  document.getElementById('header-search').value='';
+  applyFilters();
+}
+function sortPandits(v){ sortMode=v; applyFilters(); }
+function liveSearch(v){ activeFilters.search=v; applyFilters(); }
+function heroSearch(){
+  const city = document.getElementById('hero-city').value;
+  const pooja = document.getElementById('hero-pooja').value;
+  const lang = document.getElementById('hero-lang').value;
+  if(city){ document.getElementById('results-title').innerHTML=`Pandits near <span>${city}</span>`; }
+  if(pooja) activeFilters.pooja = pooja;
+  if(lang) activeFilters.lang = lang;
+  applyFilters();
+  showSection('home');
+  window.scrollTo({top:300,behavior:'smooth'});
+}
+function openModal(id){
+  currentPandit = pandits.find(p=>p.id===id);
+  const p = currentPandit;
+  document.getElementById('m-avatar').textContent = p.emoji;
+  document.getElementById('m-name').textContent = p.name;
+  document.getElementById('m-loc').textContent = '📍 ' + p.area + ', ' + p.city;
+  document.getElementById('m-badges').innerHTML = `${p.verified?'<span class="m-badge v">✓ Verified</span>':''} ${p.lang.map(l=>`<span class="m-badge l">${l}</span>`).join('')} <span class="m-badge l">★ ${p.rating} (${p.reviews})</span>`;
+  document.getElementById('m-native').innerHTML = `<strong>${p.native}</strong><p style="margin-top:6px">${p.nativeDetail}</p>`;
+  document.getElementById('m-poojas').innerHTML = p.poojas.map(pt=>`<div class="m-pooja">${pt.n}<span class="price">₹${pt.p.toLocaleString()}</span></div>`).join('');
+  document.getElementById('m-reviews').innerHTML = p.reviewList.map(r=>`<div class="review"><div class="review-top"><span class="reviewer">${r.u}</span><span class="rev-rating">${r.r}</span></div><p>${r.t}</p></div>`).join('');
+  document.getElementById('book-form').style.display='flex';
+  document.getElementById('booking-success').style.display='none';
+  document.getElementById('modal').classList.add('open');
+  initCalendar(p);
+}
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+document.getElementById('modal').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
+function confirmBooking(){
+  const name=document.getElementById('b-name').value.trim();
+  const phone=document.getElementById('b-phone').value.trim();
+  const date=document.getElementById('b-date').value;
+  const addr=document.getElementById('b-addr').value.trim();
+  if(!name||!phone||!date||!addr){alert('Please fill in all booking details.');return;}
+  const pooja=document.getElementById('b-pooja').value;
+  const time=document.getElementById('b-time').value;
+  document.getElementById('book-form').style.display='none';
+  document.getElementById('booking-success').style.display='block';
+  document.getElementById('booking-msg').textContent=`${currentPandit.name} has been booked for ${pooja} on ${new Date(date).toDateString()} at ${time}. You will receive a confirmation call within 2 hours on your registered number.`;
+}
+function showSection(name){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.pnav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('section-'+name).classList.add('active');
+  document.getElementById('nav-'+name).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function submitReg(){
+  const name=document.getElementById('r-name').value.trim();
+  const phone=document.getElementById('r-phone').value.trim();
+  const city=document.getElementById('r-city').value.trim();
+  const region=document.getElementById('r-region').value;
+  if(!name||!phone||!city||!region){alert('Please fill in all required fields (marked with *).');return;}
+  document.getElementById('reg-form-card').style.display='none';
+  document.getElementById('reg-success').style.display='block';
+}
+function resetReg(){
+  document.getElementById('reg-form-card').style.display='block';
+  document.getElementById('reg-success').style.display='none';
+  document.getElementById('reg-form-card').querySelectorAll('input,select,textarea').forEach(el=>el.value='');
+}
+applyFilters();
+</script>
+<!-- WHATSAPP FLOAT BUTTON -->
+<a class="wa-float" href="https://wa.me/918502866968?text=Namaste%20I%20want%20to%20book%20a%20pandit" target="_blank">💬</a>
+</body>
+</html>.search-bar .s-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--text3)}
 .nav-links{display:flex;gap:4px;flex-shrink:0}
 .nav-btn{padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:'Poppins',sans-serif;transition:.2s}
 .nav-btn.ghost{background:transparent;color:var(--text2);border:1px solid var(--border)}
