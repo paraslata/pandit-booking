@@ -883,5 +883,30 @@ applyFilters();
 </script>
 <!-- WHATSAPP FLOAT BUTTON -->
 <a class="wa-float" href="https://wa.me/918502866968?text=Namaste%20I%20want%20to%20book%20a%20pandit" target="_blank">💬</a>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "PASTE_YOURS",
+    authDomain: "PASTE_YOURS",
+    projectId: "pandit-booking-e01d5",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.saveBooking = async function () {
+    const name = document.getElementById("name").value;
+
+    await addDoc(collection(db, "bookings"), {
+      Name: name,
+      service: "Pooja",
+      createdAt: new Date()
+    });
+
+    alert("Booking saved!");
+  };
+</script>
 </body>
 </html>
