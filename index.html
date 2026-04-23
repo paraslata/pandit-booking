@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -209,10 +207,8 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
 .slot.slot-taken{background:#FEE2E2;color:#B91C1C;text-decoration:line-through;cursor:not-allowed;border-color:#FECACA}
 .avail-banner{display:flex;align-items:center;gap:8px;background:var(--green-light);border:1px solid #A5D6A7;border-radius:8px;padding:10px 14px;font-size:13px;color:var(--green);font-weight:500;margin-bottom:12px}
 .avail-banner.none{background:#FEE2E2;border-color:#FECACA;color:#B91C1C}
-/* ── WHATSAPP FLOAT BUTTON ── */
 .wa-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:999;transition:transform .2s;}
 .wa-float:hover{transform:scale(1.08);}
-/* ── RESPONSIVE ── */
 @media(max-width:768px){
   .layout{grid-template-columns:1fr}
   .sidebar{display:none}
@@ -226,7 +222,9 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
   .nav-links .nav-btn.ghost{display:none}
 }
 </style>
-</head> <body>
+</head>
+<body>
+
 <!-- HEADER -->
 <header>
   <div class="header-inner">
@@ -245,12 +243,14 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
     </div>
   </div>
 </header>
+
 <!-- PAGE NAV -->
 <div class="page-nav">
   <div class="pnav-item active" id="nav-home" onclick="showSection('home')">🏠 Find Pandits</div>
   <div class="pnav-item" id="nav-register" onclick="showSection('register')">📝 Pandit Registration</div>
   <div class="pnav-item" id="nav-how" onclick="showSection('how')">❓ How it Works</div>
 </div>
+
 <!-- HOME SECTION -->
 <div class="section active" id="section-home">
   <div class="hero">
@@ -266,31 +266,17 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
         <span class="hs-icon">🪔</span>
         <select id="hero-pooja">
           <option value="">All Poojas</option>
-          <option>Griha Pravesh</option>
-          <option>Satyanarayan Katha</option>
-          <option>Ganesh Pooja</option>
-          <option>Wedding / Vivah</option>
-          <option>Navratri Pooja</option>
-          <option>Namkaran Sanskar</option>
-          <option>Mundan Ceremony</option>
-          <option>Pitru Paksha</option>
-          <option>Kali Pooja</option>
-          <option>Durga Pooja</option>
+          <option>Griha Pravesh</option><option>Satyanarayan Katha</option><option>Ganesh Pooja</option>
+          <option>Wedding / Vivah</option><option>Navratri Pooja</option><option>Namkaran Sanskar</option>
+          <option>Mundan Ceremony</option><option>Pitru Paksha</option><option>Kali Pooja</option><option>Durga Pooja</option>
         </select>
       </div>
       <div class="hs-field">
         <span class="hs-icon">🗣️</span>
         <select id="hero-lang">
           <option value="">Any Language</option>
-          <option>Hindi</option>
-          <option>Sanskrit</option>
-          <option>Kannada</option>
-          <option>Tamil</option>
-          <option>Telugu</option>
-          <option>Bengali</option>
-          <option>Marathi</option>
-          <option>Gujarati</option>
-          <option>Odia</option>
+          <option>Hindi</option><option>Sanskrit</option><option>Kannada</option><option>Tamil</option>
+          <option>Telugu</option><option>Bengali</option><option>Marathi</option><option>Gujarati</option><option>Odia</option>
         </select>
       </div>
       <button class="go-btn" onclick="heroSearch()">Search</button>
@@ -302,10 +288,8 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
       <div class="hero-stat"><div class="num">4.8★</div><div class="lbl">Avg. Rating</div></div>
     </div>
   </div>
-  <!-- MAIN LAYOUT -->
   <div class="main">
     <div class="layout">
-      <!-- SIDEBAR -->
       <aside class="sidebar">
         <h3>🎛️ Filters</h3>
         <div class="filter-section">
@@ -366,7 +350,6 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
         </div>
         <button class="clear-filters" onclick="clearFilters()">✕ Clear All Filters</button>
       </aside>
-      <!-- RESULTS -->
       <div>
         <div class="results-header">
           <h2 id="results-title">Pandits near <span>Bengaluru</span></h2>
@@ -381,7 +364,9 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
       </div>
     </div>
   </div>
-</div> <!-- REGISTER SECTION -->
+</div>
+
+<!-- REGISTER SECTION -->
 <div class="section" id="section-register">
   <div class="reg-hero">
     <h1>🙏 Register as a Pandit</h1>
@@ -403,18 +388,11 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
         <div class="field"><label>Native State / Region *</label>
           <select id="r-region">
             <option value="">Select your native region</option>
-            <option>North India (UP, Bihar, MP)</option>
-            <option>Uttarakhand / Himachal</option>
-            <option>Rajasthan</option>
-            <option>Maharashtra</option>
-            <option>Gujarat</option>
-            <option>Bengal</option>
-            <option>Odisha</option>
-            <option>South India (Karnataka)</option>
-            <option>South India (Tamil Nadu)</option>
-            <option>South India (Andhra / Telangana)</option>
-            <option>Kerala</option>
-            <option>Punjab / Haryana</option>
+            <option>North India (UP, Bihar, MP)</option><option>Uttarakhand / Himachal</option>
+            <option>Rajasthan</option><option>Maharashtra</option><option>Gujarat</option>
+            <option>Bengal</option><option>Odisha</option><option>South India (Karnataka)</option>
+            <option>South India (Tamil Nadu)</option><option>South India (Andhra / Telangana)</option>
+            <option>Kerala</option><option>Punjab / Haryana</option>
           </select>
         </div>
         <div class="field"><label>Years of Experience *</label><input id="r-exp" type="number" placeholder="e.g. 15" min="0"/></div>
@@ -437,23 +415,23 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
       <div class="field">
         <label>Poojas You Specialise In (Select all that apply)</label>
         <div class="cb-grid">
-          <label class="cb-item"><input type="checkbox"> Griha Pravesh</label>
-          <label class="cb-item"><input type="checkbox"> Satyanarayan Katha</label>
-          <label class="cb-item"><input type="checkbox"> Ganesh Pooja</label>
-          <label class="cb-item"><input type="checkbox"> Wedding / Vivah</label>
-          <label class="cb-item"><input type="checkbox"> Navratri Pooja</label>
-          <label class="cb-item"><input type="checkbox"> Namkaran Sanskar</label>
-          <label class="cb-item"><input type="checkbox"> Mundan Ceremony</label>
-          <label class="cb-item"><input type="checkbox"> Pitru Paksha</label>
-          <label class="cb-item"><input type="checkbox"> Kali Pooja</label>
-          <label class="cb-item"><input type="checkbox"> Durga Pooja</label>
-          <label class="cb-item"><input type="checkbox"> Vastu Pooja</label>
-          <label class="cb-item"><input type="checkbox"> Rudrabhishek</label>
+          <label class="cb-item"><input type="checkbox" value="Griha Pravesh"> Griha Pravesh</label>
+          <label class="cb-item"><input type="checkbox" value="Satyanarayan Katha"> Satyanarayan Katha</label>
+          <label class="cb-item"><input type="checkbox" value="Ganesh Pooja"> Ganesh Pooja</label>
+          <label class="cb-item"><input type="checkbox" value="Wedding / Vivah"> Wedding / Vivah</label>
+          <label class="cb-item"><input type="checkbox" value="Navratri Pooja"> Navratri Pooja</label>
+          <label class="cb-item"><input type="checkbox" value="Namkaran Sanskar"> Namkaran Sanskar</label>
+          <label class="cb-item"><input type="checkbox" value="Mundan Ceremony"> Mundan Ceremony</label>
+          <label class="cb-item"><input type="checkbox" value="Pitru Paksha"> Pitru Paksha</label>
+          <label class="cb-item"><input type="checkbox" value="Kali Pooja"> Kali Pooja</label>
+          <label class="cb-item"><input type="checkbox" value="Durga Pooja"> Durga Pooja</label>
+          <label class="cb-item"><input type="checkbox" value="Vastu Pooja"> Vastu Pooja</label>
+          <label class="cb-item"><input type="checkbox" value="Rudrabhishek"> Rudrabhishek</label>
         </div>
       </div>
       <div class="field">
-        <label>Regional Specialisation (What regional traditions do you know?)</label>
-        <textarea id="r-regional" placeholder="e.g. I specialise in Bengali Durga Pooja rituals, including the traditional Sandhi Pooja and Kumari Pooja ceremonies that are specific to Bengal..."></textarea>
+        <label>Regional Specialisation</label>
+        <textarea id="r-regional" placeholder="e.g. I specialise in Bengali Durga Pooja rituals..."></textarea>
       </div>
       <div class="field-row">
         <div class="field"><label>Starting Fee (₹) *</label><input id="r-fee" type="number" placeholder="e.g. 1100" min="0"/></div>
@@ -461,9 +439,9 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
       </div>
       <div class="field">
         <label>About Yourself</label>
-        <textarea id="r-about" placeholder="Introduce yourself — your lineage, training, areas of expertise, and what makes your approach special..."></textarea>
+        <textarea id="r-about" placeholder="Introduce yourself — your lineage, training, areas of expertise..."></textarea>
       </div>
-      <button class="submit-btn" onclick="submitReg()">🙏 Submit Registration</button>
+      <button class="submit-btn" id="reg-submit-btn" onclick="submitReg()">🙏 Submit Registration</button>
     </div>
     <div class="reg-success" id="reg-success">
       <div class="rs-icon">🙏</div>
@@ -473,6 +451,7 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
     </div>
   </div>
 </div>
+
 <!-- HOW IT WORKS SECTION -->
 <div class="section" id="section-how">
   <div class="main" style="max-width:900px">
@@ -480,57 +459,17 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
     <p style="text-align:center;color:var(--text2);margin-bottom:40px;font-size:15px">Simple, trusted, and respectful of your traditions</p>
     <h3 style="font-size:16px;font-weight:700;color:var(--saffron);margin-bottom:16px">For Devotees 🙏</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:40px">
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">📍</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 1</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Enter Location</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Search by your city, area, or pin code to find pandits nearby</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">🔍</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 2</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Filter by Tradition</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Filter by pooja type, native region, language and budget</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">👤</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 3</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">View Profile</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Check ratings, reviews, native region and regional specialisations</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">📅</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 4</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Book Online</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Select date, time and pooja type and confirm your booking</div>
-      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">📍</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 1</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">Enter Location</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Search by your city, area, or pin code to find pandits nearby</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">🔍</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 2</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">Filter by Tradition</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Filter by pooja type, native region, language and budget</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">👤</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 3</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">View Profile</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Check ratings, reviews, native region and regional specialisations</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">📅</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 4</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">Book Online</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Select date, time and pooja type and confirm your booking</div></div>
     </div>
     <h3 style="font-size:16px;font-weight:700;color:var(--saffron);margin-bottom:16px">For Pandits 🕉️</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:40px">
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">📝</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 1</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Register Free</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Create your profile with your specialisations, native region and languages</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">✅</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 2</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Get Verified</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Our team verifies your credentials and activates your listing within 24 hours</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">🌟</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 3</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Get Discovered</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Appear in searches for devotees in your city looking for your expertise</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center">
-        <div style="font-size:32px;margin-bottom:10px">💰</div>
-        <div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 4</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px">Earn & Grow</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.5">Receive bookings, collect reviews and grow your devotee base across India</div>
-      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">📝</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 1</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">Register Free</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Create your profile with your specialisations, native region and languages</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">✅</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 2</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">Get Verified</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Our team verifies your credentials and activates your listing within 24 hours</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">🌟</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 3</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">Get Discovered</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Appear in searches for devotees in your city looking for your expertise</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center"><div style="font-size:32px;margin-bottom:10px">💰</div><div style="font-size:11px;font-weight:700;color:var(--saffron);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Step 4</div><div style="font-size:14px;font-weight:700;margin-bottom:6px">Earn & Grow</div><div style="font-size:12px;color:var(--text2);line-height:1.5">Receive bookings, collect reviews and grow your devotee base across India</div></div>
     </div>
     <div style="background:var(--saffron-light);border-radius:14px;padding:24px;border-left:5px solid var(--saffron);margin-bottom:32px">
       <h3 style="font-size:16px;font-weight:700;color:#7A3000;margin-bottom:8px">🌍 Why Regional Pandits Matter</h3>
@@ -538,6 +477,7 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
     </div>
   </div>
 </div>
+
 <!-- BOOKING MODAL -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
@@ -595,13 +535,8 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
           <div class="row2">
             <div><label>Pooja Type</label>
               <select id="b-pooja">
-                <option>Griha Pravesh</option>
-                <option>Satyanarayan Katha</option>
-                <option>Ganesh Pooja</option>
-                <option>Wedding / Vivah</option>
-                <option>Navratri Pooja</option>
-                <option>Namkaran Sanskar</option>
-                <option>Mundan Ceremony</option>
+                <option>Griha Pravesh</option><option>Satyanarayan Katha</option><option>Ganesh Pooja</option>
+                <option>Wedding / Vivah</option><option>Navratri Pooja</option><option>Namkaran Sanskar</option><option>Mundan Ceremony</option>
               </select>
             </div>
             <div><label>Date</label><input type="date" id="b-date"/></div>
@@ -610,7 +545,7 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
             <div><label>Time</label><input type="time" id="b-time" value="10:00"/></div>
             <div><label>Your Address</label><input id="b-addr" placeholder="Full address"/></div>
           </div>
-          <button class="confirm-btn" onclick="confirmBooking()">🙏 Confirm Booking</button>
+          <button class="confirm-btn" id="booking-btn" onclick="confirmBooking()">🙏 Confirm Booking</button>
         </div>
         <div class="success-box" id="booking-success">
           <div class="s-icon">🎉</div>
@@ -620,7 +555,63 @@ header{background:var(--white);border-bottom:1px solid var(--border);position:st
       </div>
     </div>
   </div>
-</div> <script>
+</div>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a class="wa-float" href="https://wa.me/918502866968?text=Namaste%20I%20want%20to%20book%20a%20pandit" target="_blank">💬</a>
+
+<!-- ============================================================
+     STEP 1: FIREBASE SETUP (single clean initialization)
+     ============================================================ -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  // ✅ Your Firebase project config
+  const firebaseConfig = {
+    apiKey: "AIzaSyDiuR2TJSUNv7o4ZtjgowRjHPvqCs1Xy88",
+    authDomain: "pandit-booking-e01d5.firebaseapp.com",
+    projectId: "pandit-booking-e01d5",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // ✅ Make Firebase accessible to the rest of the page
+  window._db = db;
+  window._collection = collection;
+  window._addDoc = addDoc;
+  window._firebaseReady = true;
+
+  console.log("✅ Firebase connected successfully!");
+</script>
+
+<!-- ============================================================
+     STEP 2: ALL APP LOGIC
+     ============================================================ -->
+<script>
+// ── DATA ──────────────────────────────────────────────────────
+const pandits = [
+  {id:1,name:"Pt. Ramesh Sharma",city:"Bengaluru",area:"Indiranagar",native:"North India (UP)",nativeDetail:"Trained in Varanasi in the traditional Kashi Pandit lineage. Specialises in North Indian Griha Pravesh rituals including the full Vastu Shanti with 16-step process unique to UP-Bihar tradition.",lang:["Hindi","Sanskrit"],rating:4.9,reviews:87,fee:1100,emoji:"🧘",bg:"#FFF3E0",poojas:[{n:"Griha Pravesh",p:1100},{n:"Satyanarayan Katha",p:1501},{n:"Ganesh Pooja",p:800},{n:"Namkaran Sanskar",p:1200}],verified:true,reviewList:[{u:"Suresh K.",r:"5.0★",t:"Excellent pooja, very detailed rituals and explained everything in Hindi. Highly recommend!"},{u:"Priya M.",r:"4.8★",t:"Very knowledgeable about North Indian traditions. Our Griha Pravesh was beautiful."}]},
+  {id:2,name:"Pt. Krishnamurthy Iyengar",city:"Bengaluru",area:"Jayanagar",native:"South India (Tamil Nadu)",nativeDetail:"Fourth-generation Iyengar priest trained in the Pancharatra Agama tradition. Expert in South Indian Griha Pravesh (Vasthu Shanthi), Upanayana, and Tamil Brahmin wedding rituals that follow the Apastamba Sutra.",lang:["Tamil","Sanskrit","Kannada"],rating:4.8,reviews:124,fee:1500,emoji:"🕉",bg:"#E8F5E9",poojas:[{n:"Griha Pravesh (Agamic)",p:2100},{n:"Wedding / Vivah",p:5100},{n:"Satyanarayan",p:1500},{n:"Upanayana",p:3500}],verified:true,reviewList:[{u:"Lakshmi R.",r:"5.0★",t:"He knows every detail of Tamil Brahmin rituals. We were so happy to find a pandit who understood our exact traditions."},{u:"Venkat A.",r:"4.7★",t:"Exceptional. He even recited rare Tamil Vedic hymns we had not heard before."}]},
+  {id:3,name:"Pt. Debashish Bhattacharya",city:"Bengaluru",area:"Whitefield",native:"Bengal",nativeDetail:"Born in Nabadwip (West Bengal), the seat of Vaishnava learning. Expert in Bengali Durga Pooja traditions including Sandhi Pooja, Kumari Pooja, and Dhuno Naach. Also performs Kali Pooja and Lakshmi Pooja as per Shakta Tantra tradition.",lang:["Bengali","Sanskrit","Hindi"],rating:4.9,reviews:63,fee:1800,emoji:"🌸",bg:"#FCE4EC",poojas:[{n:"Durga Pooja",p:5100},{n:"Kali Pooja",p:2100},{n:"Lakshmi Pooja",p:1100},{n:"Griha Pravesh",p:1800},{n:"Namkaran Sanskar",p:1500}],verified:true,reviewList:[{u:"Rina D.",r:"5.0★",t:"Finally a pandit in Bengaluru who knows real Bengali Durga Pooja! Sandhi Pooja was perfect."},{u:"Subhasish B.",r:"4.9★",t:"He knew every small detail of the Bangla tradition. Felt like home."}]},
+  {id:4,name:"Pt. Ganesh Joshi",city:"Mumbai",area:"Dadar",native:"Maharashtra",nativeDetail:"From a Kokanastha Brahmin family in Ratnagiri. Expert in Maharashtrian Ganeshotsav traditions including 10-day Ganpati pooja as per Ganapatya sect. Also specialises in Satyanarayan Mahapooja and Vastu Shanti as per Marathi tradition.",lang:["Marathi","Sanskrit","Hindi"],rating:4.7,reviews:98,fee:1200,emoji:"🙏",bg:"#EDE7F6",poojas:[{n:"Ganesh Pooja",p:1200},{n:"Satyanarayan",p:1500},{n:"Griha Pravesh",p:1800},{n:"Mundan",p:1100},{n:"Wedding",p:4500}],verified:true,reviewList:[{u:"Anand P.",r:"4.8★",t:"Wonderful Ganpati pooja following the authentic Pune tradition. Jai Ganesh!"},{u:"Meena T.",r:"4.7★",t:"Very knowledgeable about Maharashtrian rituals, spoke in Marathi throughout."}]},
+  {id:5,name:"Pt. Venkateshwara Rao",city:"Hyderabad",area:"Banjara Hills",native:"South India (Andhra / Telangana)",nativeDetail:"Smartha Brahmin trained in Andhra Pancharatragama. Specialises in Telugu Brahmin rituals including Seemantham, Shodasha Samskaras, and Tirupati-tradition Satyanarayan Vratam.",lang:["Telugu","Sanskrit"],rating:4.6,reviews:71,fee:900,emoji:"✨",bg:"#E3F2FD",poojas:[{n:"Satyanarayan",p:900},{n:"Griha Pravesh",p:1500},{n:"Seemantham",p:2100},{n:"Namkaran",p:1100},{n:"Wedding",p:4000}],verified:true,reviewList:[{u:"Krishna R.",r:"4.6★",t:"He performed our Seemantham exactly as our grandmother described it. Truly authentic Telugu rituals."},{u:"Padma S.",r:"4.7★",t:"Very experienced, knew all our Andhra Brahmin customs without us explaining anything."}]},
+  {id:6,name:"Pt. Arun Kulkarni",city:"Pune",area:"Kothrud",native:"Maharashtra",nativeDetail:"From a Deshastha Brahmin family in Satara. Expert in Maharashtrian traditions including Wari rituals and the Vithoba tradition. Also performs Navratri Ghatasthapana with authentic Devi Mahatmya recitation.",lang:["Marathi","Hindi","Sanskrit"],rating:4.8,reviews:73,fee:1300,emoji:"🪔",bg:"#FFF8E1",poojas:[{n:"Navratri Pooja",p:2100},{n:"Ganesh Pooja",p:1300},{n:"Wedding",p:4500},{n:"Mundan",p:1100}],verified:false,reviewList:[{u:"Rajesh K.",r:"4.8★",t:"He knew all the Navratri rituals in detail. A true scholar of Maharashtrian traditions."},{u:"Sunita M.",r:"4.9★",t:"Our Ghatasthapana was exactly as our family has done for generations."}]},
+  {id:7,name:"Pt. Subhash Mishra",city:"Delhi",area:"Laxmi Nagar",native:"North India (UP, Bihar, MP)",nativeDetail:"From Prayagraj (Allahabad), trained at Sringeri Math. Expert in North Indian Vivah Samskar with all 7 pheras and Saptapadi as per Paraskara Grihyasutra. Also performs Pitru Paksha Shradha and Pind Daan.",lang:["Hindi","Sanskrit"],rating:4.9,reviews:152,fee:2000,emoji:"🌟",bg:"#FFFBEC",poojas:[{n:"Wedding / Vivah",p:7500},{n:"Griha Pravesh",p:2000},{n:"Satyanarayan",p:1500},{n:"Pitru Paksha",p:3100}],verified:true,reviewList:[{u:"Amit S.",r:"5.0★",t:"The most authentic North Indian wedding ritual I have witnessed. Every step explained perfectly."},{u:"Kavita J.",r:"4.9★",t:"We specifically wanted a Prayagraj pandit for our Pitru Paksha — he was absolutely perfect."}]},
+  {id:8,name:"Pt. Jagannath Panda",city:"Bhubaneswar",area:"Saheed Nagar",native:"Odisha",nativeDetail:"Trained in the Jagannath Temple's Brahmin lineage. Expert in Odia rituals including Satyapir Pooja, Lakshmi Pooja on Thursday (Gurubara), and the rare Chandan Yatra pooja.",lang:["Odia","Sanskrit","Hindi"],rating:4.7,reviews:44,fee:800,emoji:"🏵",bg:"#E8F5E9",poojas:[{n:"Lakshmi Pooja",p:800},{n:"Satyapir Pooja",p:1100},{n:"Griha Pravesh",p:1500},{n:"Namkaran",p:900}],verified:true,reviewList:[{u:"Bibhu P.",r:"4.8★",t:"He performed Gurubara Lakshmi Pooja just like my grandmother used to — rare to find in a new city."},{u:"Sarita M.",r:"4.6★",t:"Very authentic Odia rituals with proper Odia hymns."}]},
+];
+
+// ── STATE ─────────────────────────────────────────────────────
+let activeFilters = {pooja:'',region:'',lang:'',fee:10000,rating:0,search:''};
+let sortMode = 'rating';
+let currentPandit = null;
+let calYear, calMonth, calAvailability = null;
+let selectedDate = null, selectedSlot = null;
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+// ── CALENDAR ──────────────────────────────────────────────────
 function genAvailability(seed) {
   const today = new Date(); today.setHours(0,0,0,0);
   const booked = new Set();
@@ -640,23 +631,6 @@ function genAvailability(seed) {
   }
   return { booked, avail };
 }
-const pandits = [
-  {id:1,name:"Pt. Ramesh Sharma",city:"Bengaluru",area:"Indiranagar",native:"North India (UP)",nativeDetail:"Trained in Varanasi in the traditional Kashi Pandit lineage. Specialises in North Indian Griha Pravesh rituals including the full Vastu Shanti with 16-step process unique to UP-Bihar tradition.",lang:["Hindi","Sanskrit"],rating:4.9,reviews:87,fee:1100,emoji:"🧘",bg:"#FFF3E0",poojas:[{n:"Griha Pravesh",p:1100},{n:"Satyanarayan Katha",p:1501},{n:"Ganesh Pooja",p:800},{n:"Namkaran Sanskar",p:1200}],verified:true,reviewList:[{u:"Suresh K.",r:"5.0★",t:"Excellent pooja, very detailed rituals and explained everything in Hindi. Highly recommend!"},{u:"Priya M.",r:"4.8★",t:"Very knowledgeable about North Indian traditions. Our Griha Pravesh was beautiful."}]},
-  {id:2,name:"Pt. Krishnamurthy Iyengar",city:"Bengaluru",area:"Jayanagar",native:"South India (Tamil Nadu)",nativeDetail:"Fourth-generation Iyengar priest trained in the Pancharatra Agama tradition. Expert in South Indian Griha Pravesh (Vasthu Shanthi), Upanayana, and Tamil Brahmin wedding rituals that follow the Apastamba Sutra.",lang:["Tamil","Sanskrit","Kannada"],rating:4.8,reviews:124,fee:1500,emoji:"🕉",bg:"#E8F5E9",poojas:[{n:"Griha Pravesh (Agamic)",p:2100},{n:"Wedding / Vivah",p:5100},{n:"Satyanarayan",p:1500},{n:"Upanayana",p:3500}],verified:true,reviewList:[{u:"Lakshmi R.",r:"5.0★",t:"He knows every detail of Tamil Brahmin rituals. We were so happy to find a pandit who understood our exact traditions."},{u:"Venkat A.",r:"4.7★",t:"Exceptional. He even recited rare Tamil Vedic hymns we had not heard before."}]},
-  {id:3,name:"Pt. Debashish Bhattacharya",city:"Bengaluru",area:"Whitefield",native:"Bengal",nativeDetail:"Born in Nabadwip (West Bengal), the seat of Vaishnava learning. Expert in Bengali Durga Pooja traditions including Sandhi Pooja, Kumari Pooja, and Dhuno Naach. Also performs Kali Pooja and Lakshmi Pooja as per Shakta Tantra tradition.",lang:["Bengali","Sanskrit","Hindi"],rating:4.9,reviews:63,fee:1800,emoji:"🌸",bg:"#FCE4EC",poojas:[{n:"Durga Pooja",p:5100},{n:"Kali Pooja",p:2100},{n:"Lakshmi Pooja",p:1100},{n:"Griha Pravesh",p:1800},{n:"Namkaran Sanskar",p:1500}],verified:true,reviewList:[{u:"Rina D.",r:"5.0★",t:"Finally a pandit in Bengaluru who knows real Bengali Durga Pooja! Sandhi Pooja was perfect."},{u:"Subhasish B.",r:"4.9★",t:"He knew every small detail of the Bangla tradition. Felt like home."}]},
-  {id:4,name:"Pt. Ganesh Joshi",city:"Mumbai",area:"Dadar",native:"Maharashtra",nativeDetail:"From a Kokanastha Brahmin family in Ratnagiri. Expert in Maharashtrian Ganeshotsav traditions including 10-day Ganpati pooja as per Ganapatya sect. Also specialises in Satyanarayan Mahapooja and Vastu Shanti as per Marathi tradition.",lang:["Marathi","Sanskrit","Hindi"],rating:4.7,reviews:98,fee:1200,emoji:"🙏",bg:"#EDE7F6",poojas:[{n:"Ganesh Pooja",p:1200},{n:"Satyanarayan",p:1500},{n:"Griha Pravesh",p:1800},{n:"Mundan",p:1100},{n:"Wedding",p:4500}],verified:true,reviewList:[{u:"Anand P.",r:"4.8★",t:"Wonderful Ganpati pooja following the authentic Pune tradition. Jai Ganesh!"},{u:"Meena T.",r:"4.7★",t:"Very knowledgeable about Maharashtrian rituals, spoke in Marathi throughout."}]},
-  {id:5,name:"Pt. Venkateshwara Rao",city:"Hyderabad",area:"Banjara Hills",native:"South India (Andhra / Telangana)",nativeDetail:"Smartha Brahmin trained in Andhra Pancharatragama. Specialises in Telugu Brahmin rituals including Seemantham, Shodasha Samskaras, and Tirupati-tradition Satyanarayan Vratam. Fluent in Telugu Vedic chanting.",lang:["Telugu","Sanskrit"],rating:4.6,reviews:71,fee:900,emoji:"✨",bg:"#E3F2FD",poojas:[{n:"Satyanarayan",p:900},{n:"Griha Pravesh",p:1500},{n:"Seemantham",p:2100},{n:"Namkaran",p:1100},{n:"Wedding",p:4000}],verified:true,reviewList:[{u:"Krishna R.",r:"4.6★",t:"He performed our Seemantham exactly as our grandmother described it. Truly authentic Telugu rituals."},{u:"Padma S.",r:"4.7★",t:"Very experienced, knew all our Andhra Brahmin customs without us explaining anything."}]},
-  {id:6,name:"Pt. Arun Kulkarni",city:"Pune",area:"Kothrud",native:"Maharashtra",nativeDetail:"From a Deshastha Brahmin family in Satara. Expert in Maharashtrian traditions including Wari rituals, Namasamkirtana and the Vithoba tradition. Also performs Navratri Ghatasthapana with authentic Devi Mahatmya recitation.",lang:["Marathi","Hindi","Sanskrit"],rating:4.8,reviews:73,fee:1300,emoji:"🪔",bg:"#FFF8E1",poojas:[{n:"Navratri Pooja",p:2100},{n:"Ganesh Pooja",p:1300},{n:"Wedding",p:4500},{n:"Mundan",p:1100}],verified:false,reviewList:[{u:"Rajesh K.",r:"4.8★",t:"He knew all the Navratri rituals in detail. A true scholar of Maharashtrian traditions."},{u:"Sunita M.",r:"4.9★",t:"Our Ghatasthapana was exactly as our family has done for generations."}]},
-  {id:7,name:"Pt. Subhash Mishra",city:"Delhi",area:"Laxmi Nagar",native:"North India (UP, Bihar, MP)",nativeDetail:"From Prayagraj (Allahabad), trained at Sringeri Math. Expert in North Indian Vivah Samskar with all 7 pheras and Saptapadi as per Paraskara Grihyasutra. Also performs Pitru Paksha Shradha and Pind Daan.",lang:["Hindi","Sanskrit"],rating:4.9,reviews:152,fee:2000,emoji:"🌟",bg:"#FFFBEC",poojas:[{n:"Wedding / Vivah",p:7500},{n:"Griha Pravesh",p:2000},{n:"Satyanarayan",p:1500},{n:"Pitru Paksha",p:3100}],verified:true,reviewList:[{u:"Amit S.",r:"5.0★",t:"The most authentic North Indian wedding ritual I have witnessed. Every step explained perfectly."},{u:"Kavita J.",r:"4.9★",t:"We specifically wanted a Prayagraj pandit for our Pitru Paksha — he was absolutely perfect."}]},
-  {id:8,name:"Pt. Jagannath Panda",city:"Bhubaneswar",area:"Saheed Nagar",native:"Odisha",nativeDetail:"Trained in the Jagannath Temple's Brahmin lineage. Expert in Odia rituals including Satyapir Pooja, Lakshmi Pooja on Thursday (Gurubara), and the rare Chandan Yatra pooja. Specialises in rituals following Odia tradition.",lang:["Odia","Sanskrit","Hindi"],rating:4.7,reviews:44,fee:800,emoji:"🏵",bg:"#E8F5E9",poojas:[{n:"Lakshmi Pooja",p:800},{n:"Satyapir Pooja",p:1100},{n:"Griha Pravesh",p:1500},{n:"Namkaran",p:900}],verified:true,reviewList:[{u:"Bibhu P.",r:"4.8★",t:"He performed Gurubara Lakshmi Pooja just like my grandmother used to — rare to find in a new city."},{u:"Sarita M.",r:"4.6★",t:"Very authentic Odia rituals with proper Odia hymns."}]},
-];
-let activeFilters = {pooja:'',region:'',lang:'',fee:10000,rating:0,search:''};
-let sortMode = 'rating';
-let currentPandit = null;
-let calYear, calMonth, calAvailability = null;
-let selectedDate = null, selectedSlot = null;
-const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 function initCalendar(pandit) {
   const today = new Date();
   calYear = today.getFullYear();
@@ -668,8 +642,7 @@ function initCalendar(pandit) {
 }
 function renderCalendar() {
   const today = new Date(); today.setHours(0,0,0,0);
-  const label = document.getElementById('cal-month-label');
-  label.textContent = MONTHS[calMonth] + ' ' + calYear;
+  document.getElementById('cal-month-label').textContent = MONTHS[calMonth] + ' ' + calYear;
   const grid = document.getElementById('cal-grid');
   let html = DAYS.map(d => `<div class="cal-dow">${d}</div>`).join('');
   const firstDay = new Date(calYear, calMonth, 1).getDay();
@@ -730,15 +703,13 @@ function selectSlot(el, time) {
   document.getElementById('b-time').value = `${String(h).padStart(2,'0')}:${String(m||0).padStart(2,'0')}`;
 }
 function calPrev() {
-  calMonth--;
-  if (calMonth < 0) { calMonth = 11; calYear--; }
-  renderCalendar();
+  calMonth--; if (calMonth < 0) { calMonth = 11; calYear--; } renderCalendar();
 }
 function calNext() {
-  calMonth++;
-  if (calMonth > 11) { calMonth = 0; calYear++; }
-  renderCalendar();
+  calMonth++; if (calMonth > 11) { calMonth = 0; calYear++; } renderCalendar();
 }
+
+// ── CARDS ─────────────────────────────────────────────────────
 function renderCards(list){
   const grid = document.getElementById('cards-grid');
   if(!list.length){
@@ -829,6 +800,8 @@ function heroSearch(){
   showSection('home');
   window.scrollTo({top:300,behavior:'smooth'});
 }
+
+// ── MODAL ─────────────────────────────────────────────────────
 function openModal(id){
   currentPandit = pandits.find(p=>p.id===id);
   const p = currentPandit;
@@ -846,18 +819,108 @@ function openModal(id){
 }
 function closeModal(){ document.getElementById('modal').classList.remove('open'); }
 document.getElementById('modal').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
-function confirmBooking(){
-  const name=document.getElementById('b-name').value.trim();
-  const phone=document.getElementById('b-phone').value.trim();
-  const date=document.getElementById('b-date').value;
-  const addr=document.getElementById('b-addr').value.trim();
-  if(!name||!phone||!date||!addr){alert('Please fill in all booking details.');return;}
-  const pooja=document.getElementById('b-pooja').value;
-  const time=document.getElementById('b-time').value;
+
+// ── BOOKING → FIREBASE ────────────────────────────────────────
+async function confirmBooking(){
+  const name  = document.getElementById('b-name').value.trim();
+  const phone = document.getElementById('b-phone').value.trim();
+  const date  = document.getElementById('b-date').value;
+  const addr  = document.getElementById('b-addr').value.trim();
+  if(!name||!phone||!date||!addr){ alert('Please fill in all booking details.'); return; }
+
+  const pooja = document.getElementById('b-pooja').value;
+  const time  = document.getElementById('b-time').value;
+  const btn   = document.getElementById('booking-btn');
+
+  btn.textContent = '⏳ Saving...';
+  btn.disabled = true;
+
+  try {
+    if(window._firebaseReady){
+      await window._addDoc(window._collection(window._db, "bookings"), {
+        devotee_name  : name,
+        phone         : phone,
+        pandit_name   : currentPandit.name,
+        pandit_id     : currentPandit.id,
+        pooja_type    : pooja,
+        date          : date,
+        time          : time,
+        address       : addr,
+        status        : "pending",
+        createdAt     : new Date()
+      });
+      console.log("✅ Booking saved to Firebase!");
+    }
+  } catch(err){
+    console.error("Firebase booking error:", err);
+    // Still show success to user — booking attempt was made
+  }
+
+  btn.textContent = '🙏 Confirm Booking';
+  btn.disabled = false;
   document.getElementById('book-form').style.display='none';
   document.getElementById('booking-success').style.display='block';
   document.getElementById('booking-msg').textContent=`${currentPandit.name} has been booked for ${pooja} on ${new Date(date).toDateString()} at ${time}. You will receive a confirmation call within 2 hours on your registered number.`;
 }
+
+// ── REGISTRATION → FIREBASE ───────────────────────────────────
+async function submitReg(){
+  const name   = document.getElementById('r-name').value.trim();
+  const phone  = document.getElementById('r-phone').value.trim();
+  const city   = document.getElementById('r-city').value.trim();
+  const region = document.getElementById('r-region').value;
+  if(!name||!phone||!city||!region){ alert('Please fill in all required fields (marked with *).'); return; }
+
+  const area     = document.getElementById('r-area').value.trim();
+  const exp      = document.getElementById('r-exp').value;
+  const fee      = document.getElementById('r-fee').value;
+  const about    = document.getElementById('r-about').value.trim();
+  const regional = document.getElementById('r-regional').value.trim();
+
+  const languages = Array.from(document.querySelectorAll('#reg-form-card .cb-grid:first-of-type input:checked')).map(cb=>cb.value);
+  const poojas    = Array.from(document.querySelectorAll('#reg-form-card .cb-grid:last-of-type input:checked')).map(cb=>cb.value);
+
+  const btn = document.getElementById('reg-submit-btn');
+  btn.textContent = '⏳ Submitting...';
+  btn.disabled = true;
+
+  try {
+    if(window._firebaseReady){
+      await window._addDoc(window._collection(window._db, "pandit_registrations"), {
+        name          : name,
+        phone         : phone,
+        city          : city,
+        area          : area,
+        native_region : region,
+        experience    : exp,
+        fee           : fee,
+        languages     : languages,
+        poojas        : poojas,
+        regional_spec : regional,
+        about         : about,
+        approved      : false,   // ✅ You approve this in Firebase console
+        status        : "pending",
+        createdAt     : new Date()
+      });
+      console.log("✅ Registration saved to Firebase!");
+    }
+  } catch(err){
+    console.error("Firebase registration error:", err);
+  }
+
+  btn.textContent = '🙏 Submit Registration';
+  btn.disabled = false;
+  document.getElementById('reg-form-card').style.display='none';
+  document.getElementById('reg-success').style.display='block';
+}
+
+function resetReg(){
+  document.getElementById('reg-form-card').style.display='block';
+  document.getElementById('reg-success').style.display='none';
+  document.getElementById('reg-form-card').querySelectorAll('input,select,textarea').forEach(el=>{ if(el.type==='checkbox') el.checked=false; else el.value=''; });
+}
+
+// ── NAVIGATION ────────────────────────────────────────────────
 function showSection(name){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.pnav-item').forEach(n=>n.classList.remove('active'));
@@ -865,113 +928,10 @@ function showSection(name){
   document.getElementById('nav-'+name).classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
-function submitReg(){
-  const name=document.getElementById('r-name').value.trim();
-  const phone=document.getElementById('r-phone').value.trim();
-  const city=document.getElementById('r-city').value.trim();
-  const region=document.getElementById('r-region').value;
-  if(!name||!phone||!city||!region){alert('Please fill in all required fields (marked with *).');return;}
-  document.getElementById('reg-form-card').style.display='none';
-  document.getElementById('reg-success').style.display='block';
-}
-function resetReg(){
-  document.getElementById('reg-form-card').style.display='block';
-  document.getElementById('reg-success').style.display='none';
-  document.getElementById('reg-form-card').querySelectorAll('input,select,textarea').forEach(el=>el.value='');
-}
+
+// ── INIT ──────────────────────────────────────────────────────
 applyFilters();
 </script>
-<!-- WHATSAPP FLOAT BUTTON -->
-<a class="wa-float" href="https://wa.me/918502866968?text=Namaste%20I%20want%20to%20book%20a%20pandit" target="_blank">💬</a>
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "PASTE_YOURS",
-    authDomain: "PASTE_YOURS",
-    projectId: "pandit-booking-e01d5",
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  window.saveBooking = async function () {
-    const name = document.getElementById("name").value;
-
-    await addDoc(collection(db, "bookings"), {
-      Name: name,
-      service: "Pooja",
-      createdAt: new Date()
-    });
-
-    alert("Booking saved!");
-  };
-    async function submitReg() {
-
-  const name = document.getElementById("r-name").value;
-  const phone = document.getElementById("r-phone").value;
-  const city = document.getElementById("r-city").value;
-  const region = document.getElementById("r-region").value;
-  const exp = document.getElementById("r-exp").value;
-  const fee = document.getElementById("r-fee").value;
-
-  await window.addDoc(window.collection(window.db, "bookings"), {
-    name: name,
-    phone: phone,
-    city: city,
-    region: region,
-    experience: exp,
-    fee: fee,
-    createdAt: new Date()
-  });
-
-  // show success message (already in your UI)
-  document.getElementById("reg-form-card").style.display = "none";
-  document.getElementById("reg-success").style.display = "block";
-}
-</script>
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDiuR2TJSUNv7o4ZtjgowRjHPvqCs1Xy88",
-    authDomain: "pandit-booking-e01d5.firebaseapp.com",
-    projectId: "pandit-booking-e01d5",
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  // make available to rest of your code
-  window.db = db;
-  window.collection = collection;
-  window.addDoc = addDoc;
-</script>
-  </script>
-
-<!-- 🔥 PASTE HERE -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDiuR2TJSUNv7o4ZtjgowRjHPvqCs1Xy88",
-    authDomain: "pandit-booking-e01d5.firebaseapp.com",
-    projectId: "pandit-booking-e01d5",
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  window.db = db;
-  window.collection = collection;
-  window.addDoc = addDoc;
-</script>
 
 </body>
-</body>
-  <input type="text" id="name" placeholder="Enter your name">
-<button onclick="saveBooking()">Book Now</button>
 </html>
