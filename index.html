@@ -907,6 +907,47 @@ applyFilters();
 
     alert("Booking saved!");
   };
+    async function submitReg() {
+
+  const name = document.getElementById("r-name").value;
+  const phone = document.getElementById("r-phone").value;
+  const city = document.getElementById("r-city").value;
+  const region = document.getElementById("r-region").value;
+  const exp = document.getElementById("r-exp").value;
+  const fee = document.getElementById("r-fee").value;
+
+  await window.addDoc(window.collection(window.db, "bookings"), {
+    name: name,
+    phone: phone,
+    city: city,
+    region: region,
+    experience: exp,
+    fee: fee,
+    createdAt: new Date()
+  });
+
+  // show success message (already in your UI)
+  document.getElementById("reg-form-card").style.display = "none";
+  document.getElementById("reg-success").style.display = "block";
+}
+</script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "PASTE_YOUR_API_KEY",
+    authDomain: "pandit-booking-e01d5.firebaseapp.com",
+    projectId: "pandit-booking-e01d5",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // make available to rest of your code
+  window.db = db;
+  window.collection = collection;
+  window.addDoc = addDoc;
 </script>
 </body>
   <input type="text" id="name" placeholder="Enter your name">
