@@ -949,6 +949,28 @@ applyFilters();
   window.collection = collection;
   window.addDoc = addDoc;
 </script>
+  </script>
+
+<!-- 🔥 PASTE HERE -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDiuR2TJSUNv7o4ZtjgowRjHPvqCs1Xy88",
+    authDomain: "pandit-booking-e01d5.firebaseapp.com",
+    projectId: "pandit-booking-e01d5",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+  window.collection = collection;
+  window.addDoc = addDoc;
+</script>
+
+</body>
 </body>
   <input type="text" id="name" placeholder="Enter your name">
 <button onclick="saveBooking()">Book Now</button>
